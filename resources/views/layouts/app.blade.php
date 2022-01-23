@@ -8,7 +8,7 @@
     <title>Posty</title>
 </head>
 <body class="bg-gray-200">
-    <nav class="p-6 bg-white flex justify-between mb-6">
+    <nav class="flex justify-between p-6 mb-6 bg-white">
         <ul class="flex items-center">
             <li>
                 <a class="p-3" href="">Home</a>
@@ -22,18 +22,23 @@
         </ul>
 
         <ul class="flex items-center">
-            <li>
-                <a class="p-3" href="">Pav Rao</a>
-            </li>
-            <li>
-                <a class="p-3" href="">Login</a>
-            </li>
-            <li>
-                <a class="p-3" href="{{ route('register') }}">Register</a>
-            </li>
-            <li>
-                <a class="p-3" href="">Logout</a>
-            </li>
+            @auth
+                <li>
+                    <a class="p-3" href="">Pav Rao</a>
+                </li>
+                <li>
+                    <a class="p-3" href="">Logout</a>
+                </li>
+            @endauth
+
+            @guest
+                <li>
+                    <a class="p-3" href="">Login</a>
+                </li>
+                <li>
+                    <a class="p-3" href="{{ route('register') }}">Register</a>
+                </li>
+            @endguest
         </ul>
     </nav>
     @yield('content')
