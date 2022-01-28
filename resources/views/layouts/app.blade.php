@@ -11,10 +11,10 @@
     <nav class="flex justify-between p-6 mb-6 bg-white">
         <ul class="flex items-center">
             <li>
-                <a class="p-3" href="">Home</a>
+                <a class="p-3" href="/">Home</a>
             </li>
             <li>
-                <a class="p-3" href="">Dashboard</a>
+                <a class="p-3" href="{{ route('dashboard') }}">Dashboard</a>
             </li>
             <li>
                 <a class="p-3" href="">Post</a>
@@ -24,7 +24,7 @@
         <ul class="flex items-center">
             @auth
                 <li>
-                    <a class="p-3" href="">Pav Rao</a>
+                    <a class="p-3" href="">{{  auth()->user()->name }}</a>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="post" class="inline p-3">
