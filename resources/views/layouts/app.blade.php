@@ -27,7 +27,10 @@
                     <a class="p-3" href="">Pav Rao</a>
                 </li>
                 <li>
-                    <a class="p-3" href="">Logout</a>
+                    <form action="{{ route('logout') }}" method="post" class="inline p-3">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
                 </li>
             @endauth
 
