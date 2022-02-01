@@ -13,6 +13,8 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        dd('okay');
+        $this->validate($request, [
+            'body' => 'required'
+        ]);
     }
 }

@@ -7,11 +7,11 @@
                 @csrf
                 <div class="mb-4">
                     <label for="body" class="sr-only">Body</label>
-                    <textarea name="body" id="bpdy" cols="30" rows="4" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('body') border-red-500 @enderror" placeholder="Post something!"></textarea>
+                    <textarea name="body" id="body" cols="30" rows="4" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('body') border-red-500 @enderror" placeholder="Post something!"></textarea>
 
                     @error('body')
                         <div class="mt-2 text-sm text-red-500">
-                            {{ message }}
+                            {{ $message }}
                         </div>
                     @enderror
                 </div>
