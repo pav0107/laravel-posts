@@ -16,8 +16,8 @@
             <li>
                 <a class="p-3" href="{{ route('dashboard') }}">Dashboard</a>
             </li>
-            <li>
-                <a class="p-3" href="">Post</a>
+            <li> 
+                <a class="p-3" href="{{ route('posts') }}">Posts</a>
             </li>
         </ul>
 
